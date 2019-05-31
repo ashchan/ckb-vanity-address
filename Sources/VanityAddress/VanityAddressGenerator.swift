@@ -19,6 +19,8 @@ public final class VanityAddressGenerator {
             throw Error.invalidCharacter
         }
 
+        print(".")
+
         var privateKey = ""
         var publicKey = ""
         var address = ""
@@ -59,6 +61,9 @@ private extension VanityAddressGenerator {
     }
 
     func randomPrivateKey() -> String {
+        #if os(Linux)
+        return randomPrivateKeyLinux()
+        #else // if os(macOS)
         if #available(OSX 10.12, *) {
             let attributes: [String: Any] = [
                 kSecAttrKeyType as String: kSecAttrKeyTypeEC,
@@ -73,6 +78,26 @@ private extension VanityAddressGenerator {
         } else {
             return ""
         }
+        #endif
+    }
+
+    // This is for Linux only, just mark it as 10.13 to silent the build warnings.
+    // And don't be serious - I don't know how to generate a proper pk on Linux.
+    @available(OSX 10.13, *)
+    func randomPrivateKeyLinux() -> String {
+        let openssl = Process()
+        openssl.executableURL = URL(fileURLWithPath: "/usr/bin/openssl") // Yes it's hard-coded ;(
+        openssl.arguments = ["rand", "-hex", "32"]
+
+        let pipe = Pipe()
+        openssl.standardOutput = pipe
+        openssl.standardError = pipe
+        try! openssl.run()
+        openssl.waitUntilExit()
+
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let key = String(data: data, encoding: .utf8) ?? ""
+        return String(key.dropLast()) // \n
     }
 }
 

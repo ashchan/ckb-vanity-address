@@ -6,12 +6,23 @@ Generate a CKB address with specified suffix.
 
 Swift 5, Swift Package Manager, and fun.
 
+### macOS
+
 ```shell
 brew install pkg-config
 brew install libsodium
 ```
 
-It should be easy to support Linux, but I have to see if I'm not that lazy to do so anytime soon.
+### Linux (Ubuntu)
+
+~It should be easy to support Linux, but I have to see if I'm not that lazy to do so anytime soon.~
+
+Update: supported, but it's a stupid implementation calling `/usr/bin/openssl` to generate private keys.
+Please figure out how to set up Swift first.
+
+```shell
+apt install libsodium-dev
+```
 
 ## Usage
 

@@ -3,6 +3,7 @@ import CKB
 
 public final class VanityAddressGenerator {
     private let arguments: [String]
+    private var suffix = ""
 
     public init(arguments: [String] = CommandLine.arguments) {
         self.arguments = arguments
@@ -13,20 +14,18 @@ public final class VanityAddressGenerator {
              throw Error.suffixNotSpecified
         }
 
-        let suffix = arguments[1]
-        print("Now I need a secret to hide away for `\(suffix)`")
-        
-        // TODO: More check, e.g., suffix should only contain characters that Bech32 allows.
+        suffix = arguments[1]
+        guard isSuffixValid else {
+            throw Error.invalidCharacter
+        }
 
         var privateKey = ""
         var publicKey = ""
         var address = ""
-        var found = false
-        while !found {
+        while !address.hasSuffix(suffix) {
             printIndicator()
 
             (privateKey, publicKey, address) = nextAddress()
-            found = address.hasSuffix(suffix)
         }
 
         print(
@@ -66,10 +65,8 @@ private extension VanityAddressGenerator {
                 kSecAttrKeySizeInBits as String: 256,
                 kSecPrivateKeyAttrs as String: [kSecAttrIsExtractable as String: true]
             ]
-            guard let key = SecKeyCreateRandomKey(attributes as CFDictionary, nil) else {
-                return ""
-            }
-            guard let privateKey = SecKeyCopyExternalRepresentation(key, nil) as Data? else {
+            guard let key = SecKeyCreateRandomKey(attributes as CFDictionary, nil),
+                let privateKey = SecKeyCopyExternalRepresentation(key, nil) as Data? else {
                 return ""
             }
             return privateKey.suffix(32).toHexString()
@@ -80,13 +77,27 @@ private extension VanityAddressGenerator {
 }
 
 public extension VanityAddressGenerator {
+    var isSuffixValid: Bool {
+        let characters = "qpzry9x8gf2tvdw0s3jn54khce6mua7l".map(String.init)
+        for char in suffix.map(String.init) {
+            if !characters.contains(char) {
+                return false
+            }
+        }
+
+        return true
+    }
+
     enum Error: Swift.Error, LocalizedError {
         case suffixNotSpecified
+        case invalidCharacter
 
         public var errorDescription: String? {
             switch self {
             case .suffixNotSpecified:
                 return "Specify the suffix (1-4 char) you wish to have."
+            case .invalidCharacter:
+                return "Invalid character within suffix. Only Bech32 characters are allowed."
             }
         }
     }

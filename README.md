@@ -17,7 +17,7 @@ brew install libsodium
 
 ~It should be easy to support Linux, but I have to see if I'm not that lazy to do so anytime soon.~
 
-Update: supported, but it's a stupid implementation calling `/usr/bin/openssl` to generate private keys.
+Update: supported, but it's a stupid implementation calling `/usr/bin/openssl` to generate private keys (expect it to be slower).
 Please figure out how to set up Swift first.
 
 ```shell
@@ -32,6 +32,16 @@ swift build
 // Replace `.build/x86_64-apple-macosx/debug/` with the actual build path on your machine.
 // 666 is the suffix to look for.
 .build/x86_64-apple-macosx/debug/ckb-vanity-address 666
+```
+
+Output:
+
+```shell
+Working:  .
+🎉 Congrats! You've got an awesome address!
+	Private key: 5d253b5d5db6ce895fc3117bf8e4c90a52b67a105efc594e5e481393d0479b9c
+	Public key: 0397e4dc99ffc905ecd9f6f7d29cd88e42f3791ffabada275aa12df5e708b34100
+	Address: ckt1q9gry5zg65wssxnvredy0cm9puhkafz8py7c8yhvhlr666
 ```
 
 ## Warning

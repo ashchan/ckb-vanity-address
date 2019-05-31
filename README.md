@@ -30,3 +30,7 @@ swift build
 This tool generates address with a **suffix** you specify. Practically it should be very easy and fast to generate addresses with a 1-3 character suffix. For longer suffix it might take quite long long long time to finish, due to the fact this is a silly single thread brute force program.
 
 [Bech32](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki#bech32) doesn't allow a few alphanumeric characters. Trying to specify "1", "b", "i", or "o" will not work.
+
+## License
+
+This is released under the [MIT License](LICENSE).

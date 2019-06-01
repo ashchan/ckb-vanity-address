@@ -947,16 +947,29 @@
                                     <action selector="copyJSON:" target="XfG-lQ-9wD" id="g8N-V2-mz5"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rGv-qi-c9P">
+                                <rect key="frame" x="459" y="13" width="212" height="32"/>
+                                <buttonCell key="cell" type="push" title="Mine/LockScript Viewer" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yai-td-QIQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="8rW-X2-OUI" kind="sheet" identifier="lockScriptViewer" id="mrb-4g-EZn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="wZn-pk-A4W" firstAttribute="leading" secondItem="JFY-au-ca8" secondAttribute="leading" id="8oK-rP-BRF"/>
                             <constraint firstItem="wZn-pk-A4W" firstAttribute="trailing" secondItem="2a2-nn-dxq" secondAttribute="trailing" id="AAf-rB-mxb"/>
+                            <constraint firstItem="rGv-qi-c9P" firstAttribute="centerY" secondItem="MOg-kg-ye3" secondAttribute="centerY" id="Dqf-IP-bjZ"/>
+                            <constraint firstItem="rGv-qi-c9P" firstAttribute="width" secondItem="MOg-kg-ye3" secondAttribute="width" id="Eao-YR-1k4"/>
                             <constraint firstItem="MOg-kg-ye3" firstAttribute="top" secondItem="FHv-eg-PkW" secondAttribute="bottom" constant="20" id="LmX-B2-L3K"/>
                             <constraint firstItem="JFY-au-ca8" firstAttribute="centerY" secondItem="2a2-nn-dxq" secondAttribute="centerY" id="SJV-re-HJz"/>
                             <constraint firstItem="2a2-nn-dxq" firstAttribute="leading" secondItem="JFY-au-ca8" secondAttribute="trailing" constant="20" id="Vlc-wS-O5S"/>
                             <constraint firstAttribute="trailing" secondItem="2a2-nn-dxq" secondAttribute="trailing" constant="20" id="bR7-UB-kzK"/>
                             <constraint firstItem="2a2-nn-dxq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="elO-6Z-mKR"/>
                             <constraint firstItem="JFY-au-ca8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="gY0-uA-Ooh"/>
+                            <constraint firstItem="MOg-kg-ye3" firstAttribute="leading" secondItem="rGv-qi-c9P" secondAttribute="trailing" constant="12" id="hWh-6x-wNo"/>
                             <constraint firstItem="FHv-eg-PkW" firstAttribute="trailing" secondItem="2a2-nn-dxq" secondAttribute="trailing" id="izr-dm-u1a"/>
                             <constraint firstAttribute="bottom" secondItem="MOg-kg-ye3" secondAttribute="bottom" constant="20" id="jQ7-IN-H6V"/>
                             <constraint firstItem="FHv-eg-PkW" firstAttribute="top" secondItem="wZn-pk-A4W" secondAttribute="bottom" constant="15" id="jn4-aP-5kE"/>
@@ -982,6 +995,124 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="789"/>
+        </scene>
+        <!--Lock Script View Controller-->
+        <scene sceneID="ICu-i1-rzA">
+            <objects>
+                <viewController id="8rW-X2-OUI" customClass="LockScriptViewController" customModule="CKB_Vanity_Address" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Xae-3V-Z6G">
+                        <rect key="frame" x="0.0" y="0.0" width="685" height="247"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2pK-JL-Fhj">
+                                <rect key="frame" x="18" y="210" width="66" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Public key" id="mAL-E2-ycc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4HF-92-Vdb">
+                                <rect key="frame" x="18" y="147" width="71" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Lock script" id="zVv-Vm-Oy4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="rCn-gM-EPc">
+                                <rect key="frame" x="20" y="184" width="645" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="540" id="fUl-YR-o1S"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="6HW-3r-k5h">
+                                    <font key="font" size="12" name="Monaco"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="8rW-X2-OUI" name="value" keyPath="publicKey" id="gva-8t-ep6"/>
+                                </connections>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="oKI-ac-3om">
+                                <rect key="frame" x="20" y="81" width="645" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9Qo-oS-bfp"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ttR-fk-vxx">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aZV-eT-eNU">
+                                <rect key="frame" x="250" y="13" width="169" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="zHC-A3-jn2"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Calculate Lock Script" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JFH-Ns-ich">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="getLockScript:" target="8rW-X2-OUI" id="nY0-dh-jNe"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-K6-6vA">
+                                <rect key="frame" x="427" y="13" width="144" height="32"/>
+                                <buttonCell key="cell" type="push" title="Copy Lock Script" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WwL-cT-xVI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="copyLockScript:" target="8rW-X2-OUI" id="Qda-eC-KKo"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QUy-il-QlL">
+                                <rect key="frame" x="579" y="13" width="92" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="rSN-Lf-6wc"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ax6-Ir-mVO">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="8rW-X2-OUI" id="Pq1-Sp-iUz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oKI-ac-3om" firstAttribute="top" secondItem="4HF-92-Vdb" secondAttribute="bottom" constant="6" id="3fb-Nx-vqw"/>
+                            <constraint firstItem="rCn-gM-EPc" firstAttribute="top" secondItem="2pK-JL-Fhj" secondAttribute="bottom" constant="6" id="5ze-hN-65l"/>
+                            <constraint firstItem="aZV-eT-eNU" firstAttribute="height" secondItem="cLr-K6-6vA" secondAttribute="height" id="6Bj-IQ-Nj9"/>
+                            <constraint firstItem="4HF-92-Vdb" firstAttribute="leading" secondItem="rCn-gM-EPc" secondAttribute="leading" id="82g-AA-aeF"/>
+                            <constraint firstItem="aZV-eT-eNU" firstAttribute="centerY" secondItem="QUy-il-QlL" secondAttribute="centerY" id="8pT-2D-VH3"/>
+                            <constraint firstItem="oKI-ac-3om" firstAttribute="leading" secondItem="rCn-gM-EPc" secondAttribute="leading" id="HGl-9x-Hse"/>
+                            <constraint firstItem="oKI-ac-3om" firstAttribute="trailing" secondItem="rCn-gM-EPc" secondAttribute="trailing" id="LM6-IG-Pxf"/>
+                            <constraint firstItem="4HF-92-Vdb" firstAttribute="top" secondItem="rCn-gM-EPc" secondAttribute="bottom" constant="20" id="NfX-YM-Uan"/>
+                            <constraint firstAttribute="trailing" secondItem="QUy-il-QlL" secondAttribute="trailing" constant="20" id="Od0-E0-Vc6"/>
+                            <constraint firstItem="QUy-il-QlL" firstAttribute="leading" secondItem="cLr-K6-6vA" secondAttribute="trailing" constant="20" id="Oke-oT-r2F"/>
+                            <constraint firstItem="cLr-K6-6vA" firstAttribute="height" secondItem="QUy-il-QlL" secondAttribute="height" id="Rew-9h-1qC"/>
+                            <constraint firstItem="cLr-K6-6vA" firstAttribute="centerY" secondItem="QUy-il-QlL" secondAttribute="centerY" id="Xk7-sE-qrt"/>
+                            <constraint firstItem="cLr-K6-6vA" firstAttribute="leading" secondItem="aZV-eT-eNU" secondAttribute="trailing" constant="20" id="acE-ck-AMX"/>
+                            <constraint firstItem="2pK-JL-Fhj" firstAttribute="leading" secondItem="Xae-3V-Z6G" secondAttribute="leading" constant="20" id="mY7-5N-duS"/>
+                            <constraint firstAttribute="bottom" secondItem="QUy-il-QlL" secondAttribute="bottom" constant="20" id="ruh-7Y-jMX"/>
+                            <constraint firstItem="QUy-il-QlL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="oKI-ac-3om" secondAttribute="bottom" constant="40" id="tNy-iH-of2"/>
+                            <constraint firstItem="rCn-gM-EPc" firstAttribute="leading" secondItem="2pK-JL-Fhj" secondAttribute="leading" id="vwc-A7-TD5"/>
+                            <constraint firstAttribute="trailing" secondItem="rCn-gM-EPc" secondAttribute="trailing" constant="20" id="xNC-xF-U0N"/>
+                            <constraint firstItem="2pK-JL-Fhj" firstAttribute="top" secondItem="Xae-3V-Z6G" secondAttribute="top" constant="20" id="zn1-NH-cZt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="copyLockScriptButton" destination="cLr-K6-6vA" id="w0S-N0-Gb7"/>
+                        <outlet property="lockScriptField" destination="oKI-ac-3om" id="Rgw-eF-5Mf"/>
+                    </connections>
+                </viewController>
+                <customObject id="B3X-mh-5ko" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="KX3-FI-b7d"/>
+            </objects>
+            <point key="canvasLocation" x="521.5" y="1182.5"/>
         </scene>
     </scenes>
 </document>

@@ -7,25 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2FE2AA22A2A2CF00F97CBD /* LockScriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FE2A922A2A2CF00F97CBD /* LockScriptViewController.swift */; };
 		1A41984B22A21DD8002CED15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41984A22A21DD8002CED15 /* AppDelegate.swift */; };
 		1A41984D22A21DD8002CED15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41984C22A21DD8002CED15 /* ViewController.swift */; };
 		1A41984F22A21DD9002CED15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A41984E22A21DD9002CED15 /* Assets.xcassets */; };
 		1A41985222A21DD9002CED15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A41985022A21DD9002CED15 /* Main.storyboard */; };
 		1A41985B22A2233C002CED15 /* VanityAddressGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */; };
 		1A41985D22A233F6002CED15 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41985C22A233F6002CED15 /* Address.swift */; };
+		1A54044222A2910900567DDE /* LockScriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A54044122A2910900567DDE /* LockScriptHelper.swift */; };
 		44CEB4C77F8D0C1D91D52912 /* Pods_CKB_Vanity_Address.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A2FE2A822A299C300F97CBD /* CKB Vanity Address.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "CKB Vanity Address.entitlements"; sourceTree = "<group>"; };
+		1A2FE2A922A2A2CF00F97CBD /* LockScriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScriptViewController.swift; sourceTree = "<group>"; };
 		1A41984722A21DD8002CED15 /* CKB Vanity Address.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CKB Vanity Address.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A41984A22A21DD8002CED15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A41984C22A21DD8002CED15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A41984E22A21DD9002CED15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A41985122A21DD9002CED15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A41985322A21DD9002CED15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A41985422A21DD9002CED15 /* CKB_Vanity_Address.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CKB_Vanity_Address.entitlements; sourceTree = "<group>"; };
 		1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VanityAddressGenerator.swift; path = Sources/VanityAddress/VanityAddressGenerator.swift; sourceTree = SOURCE_ROOT; };
 		1A41985C22A233F6002CED15 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Sources/VanityAddress/Address.swift; sourceTree = SOURCE_ROOT; };
+		1A54044122A2910900567DDE /* LockScriptHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScriptHelper.swift; sourceTree = "<group>"; };
 		26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKB Vanity Address.release.xcconfig"; path = "Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address.release.xcconfig"; sourceTree = "<group>"; };
 		8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKB Vanity Address.debug.xcconfig"; path = "Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address.debug.xcconfig"; sourceTree = "<group>"; };
 		AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKB_Vanity_Address.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,12 +70,14 @@
 			children = (
 				1A41985C22A233F6002CED15 /* Address.swift */,
 				1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */,
+				1A54044122A2910900567DDE /* LockScriptHelper.swift */,
 				1A41984A22A21DD8002CED15 /* AppDelegate.swift */,
 				1A41984C22A21DD8002CED15 /* ViewController.swift */,
+				1A2FE2A922A2A2CF00F97CBD /* LockScriptViewController.swift */,
 				1A41985022A21DD9002CED15 /* Main.storyboard */,
+				1A2FE2A822A299C300F97CBD /* CKB Vanity Address.entitlements */,
 				1A41984E22A21DD9002CED15 /* Assets.xcassets */,
 				1A41985322A21DD9002CED15 /* Info.plist */,
-				1A41985422A21DD9002CED15 /* CKB_Vanity_Address.entitlements */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -127,6 +133,11 @@
 				TargetAttributes = {
 					1A41984622A21DD8002CED15 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -209,7 +220,9 @@
 			files = (
 				1A41985B22A2233C002CED15 /* VanityAddressGenerator.swift in Sources */,
 				1A41984D22A21DD8002CED15 /* ViewController.swift in Sources */,
+				1A2FE2AA22A2A2CF00F97CBD /* LockScriptViewController.swift in Sources */,
 				1A41985D22A233F6002CED15 /* Address.swift in Sources */,
+				1A54044222A2910900567DDE /* LockScriptHelper.swift in Sources */,
 				1A41984B22A21DD8002CED15 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +361,7 @@
 			baseConfigurationReference = 8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = macOS/CKB_Vanity_Address.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "macOS/CKB Vanity Address.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9A3W22M8YB;
@@ -369,7 +382,7 @@
 			baseConfigurationReference = 26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = macOS/CKB_Vanity_Address.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "macOS/CKB Vanity Address.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9A3W22M8YB;

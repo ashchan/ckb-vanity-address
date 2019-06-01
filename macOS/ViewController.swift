@@ -98,6 +98,13 @@ class ViewController: NSViewController {
         pasteBoard.clearContents()
         pasteBoard.setString(address.description, forType: .string)
     }
+
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "lockScriptViewer" {
+            let lockScriptViewController = segue.destinationController as! LockScriptViewController
+            lockScriptViewController.publicKey = "0x" + (address?.publicKey ?? "")
+        }
+    }
 }
 
 extension ViewController {

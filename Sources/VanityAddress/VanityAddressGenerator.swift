@@ -1,80 +1,28 @@
 import Foundation
-import CKB
 
 public final class VanityAddressGenerator {
-    private let arguments: [String]
-    private var suffix = ""
+    private let suffix: String
 
-    public init(arguments: [String] = CommandLine.arguments) {
-        self.arguments = arguments
+    public init(suffix: String = "") {
+        self.suffix = suffix
     }
 
-    public func run() throws {
-        guard arguments.count == 2 else {
-             throw Error.suffixNotSpecified
-        }
-
-        suffix = arguments[1]
+    public func run(_ progressReport: (() -> Void)? = nil) throws -> Address {
         guard isSuffixValid else {
             throw Error.invalidCharacter
         }
 
-        print(".")
-
         var address: Address
         repeat {
-            printIndicator()
+            progressReport?()
             address = nextAddress()
         } while !address.hasSuffix(suffix)
 
-        print(
-            """
-            🎉 Congrats! You've got an awesome address!
-            \(address)
-            """
-        )
+        return address
     }
 }
 
 private extension VanityAddressGenerator {
-    var indicators: [String] {
-        return [ ".", " .", "  .", " ."]
-    }
-
-    func printIndicator() {
-        let indicatorIndex = Int(Date().timeIntervalSince1970 * 2) % indicators.count
-        let indicator = indicators[indicatorIndex]
-        print("\u{1B}[1A\u{1B}[KWorking: \(indicator)")
-    }
-}
-
-private extension VanityAddressGenerator {
-    struct Address: CustomStringConvertible {
-        let privateKey: String
-        let publicKey: String
-        let address: String
-
-        init(privateKey: String) {
-            self.privateKey = privateKey
-            publicKey = Utils.privateToPublic(privateKey)
-            address = Utils.publicToAddress(publicKey, network: .testnet)
-        }
-
-        func hasSuffix(_ suffix: String) -> Bool {
-            return address.hasSuffix(suffix)
-        }
-
-        var description: String {
-            return """
-            {
-            \t"private_key": "0x\(privateKey)",
-            \t"public_key": "0x\(publicKey)",
-            \t"address": "\(address)"
-            }
-            """
-        }
-    }
-
     func nextAddress() -> Address {
         return Address(privateKey: randomPrivateKey())
     }
@@ -133,13 +81,10 @@ public extension VanityAddressGenerator {
     }
 
     enum Error: Swift.Error, LocalizedError {
-        case suffixNotSpecified
         case invalidCharacter
 
         public var errorDescription: String? {
             switch self {
-            case .suffixNotSpecified:
-                return "Specify the suffix (1-4 char) you wish to have."
             case .invalidCharacter:
                 return "Invalid character within suffix. Only Bech32 characters are allowed."
             }

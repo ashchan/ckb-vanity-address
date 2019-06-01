@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "CKBVanityAddress",
     products: [
-        .executable(name: "ckb-vanity-address", targets: ["CLI"]),
+        .executable(name: "cva", targets: ["CLI"]),
         .library(name: "VanityAddress", targets: ["VanityAddress"])
     ],
     dependencies: [

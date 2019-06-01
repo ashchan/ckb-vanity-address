@@ -27,11 +27,10 @@ apt install libsodium-dev
 ## Usage
 
 ```swift
-swift package update
 swift build
 // Replace `.build/x86_64-apple-macosx/debug/` with the actual build path on your machine.
 // 666 is the suffix to look for.
-.build/x86_64-apple-macosx/debug/ckb-vanity-address 666
+.build/x86_64-apple-macosx/debug/cva 666
 ```
 
 Output:

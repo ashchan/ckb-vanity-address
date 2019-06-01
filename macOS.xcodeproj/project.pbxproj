@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A41984B22A21DD8002CED15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41984A22A21DD8002CED15 /* AppDelegate.swift */; };
+		1A41984D22A21DD8002CED15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41984C22A21DD8002CED15 /* ViewController.swift */; };
+		1A41984F22A21DD9002CED15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A41984E22A21DD9002CED15 /* Assets.xcassets */; };
+		1A41985222A21DD9002CED15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A41985022A21DD9002CED15 /* Main.storyboard */; };
+		1A41985B22A2233C002CED15 /* VanityAddressGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */; };
+		1A41985D22A233F6002CED15 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41985C22A233F6002CED15 /* Address.swift */; };
+		44CEB4C77F8D0C1D91D52912 /* Pods_CKB_Vanity_Address.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A41984722A21DD8002CED15 /* CKB Vanity Address.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CKB Vanity Address.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A41984A22A21DD8002CED15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A41984C22A21DD8002CED15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A41984E22A21DD9002CED15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A41985122A21DD9002CED15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1A41985322A21DD9002CED15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A41985422A21DD9002CED15 /* CKB_Vanity_Address.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CKB_Vanity_Address.entitlements; sourceTree = "<group>"; };
+		1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VanityAddressGenerator.swift; path = Sources/VanityAddress/VanityAddressGenerator.swift; sourceTree = SOURCE_ROOT; };
+		1A41985C22A233F6002CED15 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Sources/VanityAddress/Address.swift; sourceTree = SOURCE_ROOT; };
+		26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKB Vanity Address.release.xcconfig"; path = "Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address.release.xcconfig"; sourceTree = "<group>"; };
+		8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKB Vanity Address.debug.xcconfig"; path = "Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address.debug.xcconfig"; sourceTree = "<group>"; };
+		AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKB_Vanity_Address.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A41984422A21DD8002CED15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44CEB4C77F8D0C1D91D52912 /* Pods_CKB_Vanity_Address.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A41983E22A21DD8002CED15 = {
+			isa = PBXGroup;
+			children = (
+				1A41984922A21DD8002CED15 /* macOS */,
+				1A41984822A21DD8002CED15 /* Products */,
+				C8E40C65C0FAF21C805D3A0A /* Pods */,
+				8B7B88611CE81EF9C370A995 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A41984822A21DD8002CED15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A41984722A21DD8002CED15 /* CKB Vanity Address.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A41984922A21DD8002CED15 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				1A41985C22A233F6002CED15 /* Address.swift */,
+				1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */,
+				1A41984A22A21DD8002CED15 /* AppDelegate.swift */,
+				1A41984C22A21DD8002CED15 /* ViewController.swift */,
+				1A41985022A21DD9002CED15 /* Main.storyboard */,
+				1A41984E22A21DD9002CED15 /* Assets.xcassets */,
+				1A41985322A21DD9002CED15 /* Info.plist */,
+				1A41985422A21DD9002CED15 /* CKB_Vanity_Address.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		8B7B88611CE81EF9C370A995 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C8E40C65C0FAF21C805D3A0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */,
+				26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A41984622A21DD8002CED15 /* CKB Vanity Address */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A41985722A21DD9002CED15 /* Build configuration list for PBXNativeTarget "CKB Vanity Address" */;
+			buildPhases = (
+				DCFB116F7B9D7C99002EEFA8 /* [CP] Check Pods Manifest.lock */,
+				1A41984322A21DD8002CED15 /* Sources */,
+				1A41984422A21DD8002CED15 /* Frameworks */,
+				1A41984522A21DD8002CED15 /* Resources */,
+				2007B6AA7272D0B6B2C77955 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CKB Vanity Address";
+			productName = "CKB Vanity Address";
+			productReference = 1A41984722A21DD8002CED15 /* CKB Vanity Address.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A41983F22A21DD8002CED15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "James Chen";
+				TargetAttributes = {
+					1A41984622A21DD8002CED15 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 1A41984222A21DD8002CED15 /* Build configuration list for PBXProject "macOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1A41983E22A21DD8002CED15;
+			productRefGroup = 1A41984822A21DD8002CED15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A41984622A21DD8002CED15 /* CKB Vanity Address */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A41984522A21DD8002CED15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A41984F22A21DD9002CED15 /* Assets.xcassets in Resources */,
+				1A41985222A21DD9002CED15 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2007B6AA7272D0B6B2C77955 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCFB116F7B9D7C99002EEFA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CKB Vanity Address-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A41984322A21DD8002CED15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A41985B22A2233C002CED15 /* VanityAddressGenerator.swift in Sources */,
+				1A41984D22A21DD8002CED15 /* ViewController.swift in Sources */,
+				1A41985D22A233F6002CED15 /* Address.swift in Sources */,
+				1A41984B22A21DD8002CED15 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A41985022A21DD9002CED15 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A41985122A21DD9002CED15 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A41985522A21DD9002CED15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A41985622A21DD9002CED15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		1A41985822A21DD9002CED15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = macOS/CKB_Vanity_Address.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9A3W22M8YB;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ashchan.CKB-Vanity-Address";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1A41985922A21DD9002CED15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = macOS/CKB_Vanity_Address.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9A3W22M8YB;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ashchan.CKB-Vanity-Address";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A41984222A21DD8002CED15 /* Build configuration list for PBXProject "macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A41985522A21DD9002CED15 /* Debug */,
+				1A41985622A21DD9002CED15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A41985722A21DD9002CED15 /* Build configuration list for PBXNativeTarget "CKB Vanity Address" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A41985822A21DD9002CED15 /* Debug */,
+				1A41985922A21DD9002CED15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A41983F22A21DD8002CED15 /* Project object */;
+}

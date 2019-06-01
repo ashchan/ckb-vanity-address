@@ -21,21 +21,16 @@ public final class VanityAddressGenerator {
 
         print(".")
 
-        var privateKey = ""
-        var publicKey = ""
-        var address = ""
-        while !address.hasSuffix(suffix) {
+        var address: Address
+        repeat {
             printIndicator()
-
-            (privateKey, publicKey, address) = nextAddress()
-        }
+            address = nextAddress()
+        } while !address.hasSuffix(suffix)
 
         print(
             """
             🎉 Congrats! You've got an awesome address!
-            \tPrivate key: \(privateKey)
-            \tPublic key: \(publicKey)
-            \tAddress: \(address)
+            \(address)
             """
         )
     }
@@ -54,10 +49,34 @@ private extension VanityAddressGenerator {
 }
 
 private extension VanityAddressGenerator {
-    func nextAddress() -> (privateKey: String, publicKey: String, address: String) {
-        let privateKey = randomPrivateKey()
-        let publicKey = Utils.privateToPublic(privateKey)
-        return (privateKey, publicKey, Utils.publicToAddress(publicKey, network: .testnet))
+    struct Address: CustomStringConvertible {
+        let privateKey: String
+        let publicKey: String
+        let address: String
+
+        init(privateKey: String) {
+            self.privateKey = privateKey
+            publicKey = Utils.privateToPublic(privateKey)
+            address = Utils.publicToAddress(publicKey, network: .testnet)
+        }
+
+        func hasSuffix(_ suffix: String) -> Bool {
+            return address.hasSuffix(suffix)
+        }
+
+        var description: String {
+            return """
+            {
+            \t"private_key": "0x\(privateKey)",
+            \t"public_key": "0x\(publicKey)",
+            \t"address": "\(address)"
+            }
+            """
+        }
+    }
+
+    func nextAddress() -> Address {
+        return Address(privateKey: randomPrivateKey())
     }
 
     func randomPrivateKey() -> String {

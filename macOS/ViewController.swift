@@ -20,21 +20,25 @@ class ViewController: NSViewController {
     @IBOutlet weak var copyPrivateKeyButton: NSButton!
     @IBOutlet weak var copyPublicKeyButton: NSButton!
     @IBOutlet weak var copyAddressButton: NSButton!
+    @IBOutlet weak var copyJSONButton: NSButton!
 
 
     @objc var addressSuffix = ""
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private var address: Address! {
+        didSet {
+            privateKeyField.stringValue = "0x" + address.privateKey
+            publicKeyField.stringValue = "0x" + address.publicKey
+            addressField.stringValue = address.address
+        }
     }
 
     @IBAction func generateButtonClicked(_ sender: Any) {
-        beforeGenerate()
+        disableControls()
         DispatchQueue.global().async {
             let result = self.generate()
             DispatchQueue.main.async {
                 self.process(result: result)
-                self.afterGenerate()
+                self.enableControls()
             }
         }
     }
@@ -42,28 +46,54 @@ class ViewController: NSViewController {
     func process(result: Result<Address, Error>) {
         switch result {
         case .success(let address):
-            privateKeyField.stringValue = "0x" + address.privateKey
-            publicKeyField.stringValue = "0x" + address.publicKey
-            addressField.stringValue = address.address
+            self.address = address
         case .failure(let error):
             showError(error)
         }
     }
 
-    func beforeGenerate() {
+    func disableControls() {
         view.window?.makeFirstResponder(nil)
 
         indicator.isHidden = false
         indicator.startAnimation(nil)
         suffixTextField.isEnabled = false
         generateButton.isEnabled = false
+
+        [copyPrivateKeyButton, copyPublicKeyButton, copyAddressButton].forEach { $0.isEnabled = false }
     }
 
-    func afterGenerate() {
+    func enableControls() {
         indicator.isHidden = true
         indicator.stopAnimation(nil)
         suffixTextField.isEnabled = true
         generateButton.isEnabled = true
+
+        [copyPrivateKeyButton, copyPublicKeyButton, copyAddressButton].forEach { $0.isEnabled = true }
+    }
+
+    @IBAction func copyPrivateKey(_ sender: Any) {
+        let pasteBoard = NSPasteboard.general
+        pasteBoard.clearContents()
+        pasteBoard.setString(address.privateKey, forType: .string)
+    }
+
+    @IBAction func copyPublicKey(_ sender: Any) {
+        let pasteBoard = NSPasteboard.general
+        pasteBoard.clearContents()
+        pasteBoard.setString(address.publicKey, forType: .string)
+    }
+
+    @IBAction func copyAddress(_ sender: Any) {
+        let pasteBoard = NSPasteboard.general
+        pasteBoard.clearContents()
+        pasteBoard.setString(address.address, forType: .string)
+    }
+
+    @IBAction func copyJSON(_ sender: Any) {
+        let pasteBoard = NSPasteboard.general
+        pasteBoard.clearContents()
+        pasteBoard.setString(address.description, forType: .string)
     }
 }
 

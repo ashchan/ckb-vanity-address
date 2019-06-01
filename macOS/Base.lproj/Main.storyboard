@@ -707,11 +707,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="CKB_Vanity_Address" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="792" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="897" height="271"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JFY-au-ca8">
-                                <rect key="frame" x="20" y="228" width="632" height="22"/>
+                                <rect key="frame" x="20" y="229" width="737" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="492" id="Cel-Yf-Zol"/>
                                 </constraints>
@@ -733,7 +733,7 @@
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2a2-nn-dxq">
-                                <rect key="frame" x="666" y="221" width="112" height="33"/>
+                                <rect key="frame" x="771" y="222" width="112" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Hxl-WE-33X"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="eWo-MS-jtn"/>
@@ -747,16 +747,16 @@
                                 </connections>
                             </button>
                             <progressIndicator hidden="YES" wantsLayer="YES" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-pk-A4W">
-                                <rect key="frame" x="20" y="181" width="752" height="32"/>
+                                <rect key="frame" x="20" y="182" width="857" height="32"/>
                             </progressIndicator>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHv-eg-PkW">
-                                <rect key="frame" x="20" y="20" width="752" height="146"/>
+                                <rect key="frame" x="20" y="61" width="857" height="106"/>
                                 <subviews>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqY-lx-tsk" userLabel="Stack View - Private Key">
-                                        <rect key="frame" x="0.0" y="58" width="752" height="88"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqY-lx-tsk" userLabel="Stack View - Private Key">
+                                        <rect key="frame" x="0.0" y="76" width="857" height="30"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4JO-mt-wjy">
-                                                <rect key="frame" x="-2" y="71" width="76" height="17"/>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4JO-mt-wjy">
+                                                <rect key="frame" x="-2" y="13" width="76" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="mF6-tM-z5D"/>
                                                 </constraints>
@@ -766,10 +766,10 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <secureTextField verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AKp-oZ-pjh">
-                                                <rect key="frame" x="92" y="65" width="540" height="23"/>
+                                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AKp-oZ-pjh">
+                                                <rect key="frame" x="92" y="7" width="645" height="23"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="540" id="zkp-FY-jQu"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="540" id="zkp-FY-jQu"/>
                                                 </constraints>
                                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="53f-g2-8ur">
                                                     <font key="font" size="12" name="Menlo-Regular"/>
@@ -780,17 +780,23 @@
                                                     </allowedInputSourceLocales>
                                                 </secureTextFieldCell>
                                             </secureTextField>
-                                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="buu-cx-U70">
-                                                <rect key="frame" x="646" y="60" width="112" height="32"/>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="buu-cx-U70">
+                                                <rect key="frame" x="751" y="2" width="112" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="0Ho-5I-ndb"/>
+                                                    <constraint firstAttribute="width" constant="100" id="0Ho-5I-ndb"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ufy-3U-SQa">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="copyPrivateKey:" target="XfG-lQ-9wD" id="dVU-uZ-Nyg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="c0Q-Z1-76Y"/>
+                                        </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
@@ -802,11 +808,11 @@
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-ZQ-9ew" userLabel="Stack View - Public Key">
-                                        <rect key="frame" x="0.0" y="29" width="752" height="21"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-ZQ-9ew" userLabel="Stack View - Public Key">
+                                        <rect key="frame" x="0.0" y="38" width="857" height="30"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-Ym-pH2">
-                                                <rect key="frame" x="-2" y="4" width="76" height="17"/>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-Ym-pH2">
+                                                <rect key="frame" x="-2" y="13" width="76" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="Dkq-rt-aqO"/>
                                                 </constraints>
@@ -816,10 +822,10 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField verticalHuggingPriority="750" ambiguous="YES" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="2Eg-wg-tzR">
-                                                <rect key="frame" x="92" y="1" width="540" height="20"/>
+                                            <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="2Eg-wg-tzR">
+                                                <rect key="frame" x="92" y="10" width="645" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="540" id="pvF-Tq-OxT"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="540" id="pvF-Tq-OxT"/>
                                                 </constraints>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="CcJ-BL-jkw">
                                                     <font key="font" size="12" name="Monaco"/>
@@ -827,17 +833,23 @@
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-FW-UiG">
-                                                <rect key="frame" x="646" y="-7" width="112" height="32"/>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-FW-UiG">
+                                                <rect key="frame" x="751" y="2" width="112" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vkW-k1-Eh8"/>
+                                                    <constraint firstAttribute="width" constant="100" id="vkW-k1-Eh8"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EeV-o8-oVW">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="copyPublicKey:" target="XfG-lQ-9wD" id="HNz-sr-zA2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7m6-ax-W9e"/>
+                                        </constraints>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
@@ -849,46 +861,52 @@
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aPM-7V-8KG" userLabel="Stack View - Address">
-                                        <rect key="frame" x="0.0" y="0.0" width="752" height="21"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQN-tG-lkj" userLabel="Stack View - Address">
+                                        <rect key="frame" x="0.0" y="0.0" width="857" height="30"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="heF-Bn-c1D">
-                                                <rect key="frame" x="-2" y="4" width="76" height="17"/>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tH5-b5-qa9">
+                                                <rect key="frame" x="-2" y="13" width="76" height="17"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="MLY-Gf-YI7"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="CgH-3y-QbW"/>
                                                 </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Address" id="IkC-da-mtB">
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Address" id="mXD-c8-S5T">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <textField verticalHuggingPriority="750" ambiguous="YES" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="pim-F0-gog">
-                                                <rect key="frame" x="92" y="1" width="540" height="20"/>
+                                            <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="J8w-5M-yYz">
+                                                <rect key="frame" x="92" y="10" width="645" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="540" id="36o-EI-ddo"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="540" id="EHc-yg-zUC"/>
                                                 </constraints>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="rBF-sL-AqS">
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="22l-x3-GzF">
                                                     <font key="font" size="12" name="Monaco"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MOg-kg-ye3">
-                                                <rect key="frame" x="646" y="-7" width="112" height="32"/>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J3o-Dw-YJ7">
+                                                <rect key="frame" x="751" y="2" width="112" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lmT-B8-GsY"/>
+                                                    <constraint firstAttribute="width" constant="100" id="dGv-Kp-jq9"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0hI-zs-5Jz">
+                                                <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="865-ro-0fP">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="copyAddress:" target="XfG-lQ-9wD" id="r4S-lB-BOR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XSn-zL-29d"/>
+                                        </constraints>
                                         <visibilityPriorities>
-                                            <real value="1000"/>
                                             <integer value="1000"/>
-                                            <real value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
                                             <real value="3.4028234663852886e+38"/>
@@ -897,6 +915,14 @@
                                         </customSpacing>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iQN-tG-lkj" secondAttribute="trailing" id="3tZ-AJ-Un5"/>
+                                    <constraint firstAttribute="trailing" secondItem="JqY-lx-tsk" secondAttribute="trailing" id="C9n-TS-gNT"/>
+                                    <constraint firstItem="iQN-tG-lkj" firstAttribute="leading" secondItem="FHv-eg-PkW" secondAttribute="leading" id="N1U-SI-ObU"/>
+                                    <constraint firstItem="JqY-lx-tsk" firstAttribute="leading" secondItem="FHv-eg-PkW" secondAttribute="leading" id="Pma-Nh-Yvr"/>
+                                    <constraint firstAttribute="trailing" secondItem="gF9-ZQ-9ew" secondAttribute="trailing" id="UIA-0c-dUc"/>
+                                    <constraint firstItem="gF9-ZQ-9ew" firstAttribute="leading" secondItem="FHv-eg-PkW" secondAttribute="leading" id="avm-1F-PXm"/>
+                                </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
@@ -908,26 +934,42 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MOg-kg-ye3" userLabel="Copy JSON Button">
+                                <rect key="frame" x="671" y="13" width="212" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="lmT-B8-GsY"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Copy all as JSON" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0hI-zs-5Jz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="copyJSON:" target="XfG-lQ-9wD" id="g8N-V2-mz5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="wZn-pk-A4W" firstAttribute="leading" secondItem="JFY-au-ca8" secondAttribute="leading" id="8oK-rP-BRF"/>
                             <constraint firstItem="wZn-pk-A4W" firstAttribute="trailing" secondItem="2a2-nn-dxq" secondAttribute="trailing" id="AAf-rB-mxb"/>
+                            <constraint firstItem="MOg-kg-ye3" firstAttribute="top" secondItem="FHv-eg-PkW" secondAttribute="bottom" constant="20" id="LmX-B2-L3K"/>
                             <constraint firstItem="JFY-au-ca8" firstAttribute="centerY" secondItem="2a2-nn-dxq" secondAttribute="centerY" id="SJV-re-HJz"/>
                             <constraint firstItem="2a2-nn-dxq" firstAttribute="leading" secondItem="JFY-au-ca8" secondAttribute="trailing" constant="20" id="Vlc-wS-O5S"/>
                             <constraint firstAttribute="trailing" secondItem="2a2-nn-dxq" secondAttribute="trailing" constant="20" id="bR7-UB-kzK"/>
                             <constraint firstItem="2a2-nn-dxq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="elO-6Z-mKR"/>
                             <constraint firstItem="JFY-au-ca8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="gY0-uA-Ooh"/>
                             <constraint firstItem="FHv-eg-PkW" firstAttribute="trailing" secondItem="2a2-nn-dxq" secondAttribute="trailing" id="izr-dm-u1a"/>
+                            <constraint firstAttribute="bottom" secondItem="MOg-kg-ye3" secondAttribute="bottom" constant="20" id="jQ7-IN-H6V"/>
                             <constraint firstItem="FHv-eg-PkW" firstAttribute="top" secondItem="wZn-pk-A4W" secondAttribute="bottom" constant="15" id="jn4-aP-5kE"/>
                             <constraint firstItem="FHv-eg-PkW" firstAttribute="leading" secondItem="JFY-au-ca8" secondAttribute="leading" id="mOa-mG-XeN"/>
+                            <constraint firstItem="MOg-kg-ye3" firstAttribute="trailing" secondItem="2a2-nn-dxq" secondAttribute="trailing" id="ojW-mB-DyV"/>
                             <constraint firstItem="JFY-au-ca8" firstAttribute="height" secondItem="2a2-nn-dxq" secondAttribute="height" id="tfH-IG-stQ"/>
                             <constraint firstItem="wZn-pk-A4W" firstAttribute="top" secondItem="JFY-au-ca8" secondAttribute="bottom" constant="15" id="uAF-0V-RoM"/>
-                            <constraint firstAttribute="bottom" secondItem="FHv-eg-PkW" secondAttribute="bottom" constant="20" id="vaT-WM-E0F"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addressField" destination="pim-F0-gog" id="ipb-RF-ita"/>
+                        <outlet property="addressField" destination="J8w-5M-yYz" id="3W9-4G-ne4"/>
                         <outlet property="copyAddressButton" destination="MOg-kg-ye3" id="IkN-If-0ER"/>
+                        <outlet property="copyJSONButton" destination="MOg-kg-ye3" id="pbN-s4-UWZ"/>
                         <outlet property="copyPrivateKeyButton" destination="buu-cx-U70" id="LLk-5z-T7r"/>
                         <outlet property="copyPublicKeyButton" destination="DUj-FW-UiG" id="rxr-3B-oK6"/>
                         <outlet property="generateButton" destination="2a2-nn-dxq" id="CWV-C2-Ky6"/>
@@ -939,7 +981,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="76" y="789"/>
         </scene>
     </scenes>
 </document>

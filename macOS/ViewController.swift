@@ -22,6 +22,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var copyAddressButton: NSButton!
     @IBOutlet weak var copyJSONButton: NSButton!
 
+    private var copyButtons: [NSButton] {
+        return [copyPrivateKeyButton, copyPublicKeyButton, copyAddressButton, copyJSONButton]
+    }
 
     @objc var addressSuffix = ""
     private var address: Address! {
@@ -60,7 +63,7 @@ class ViewController: NSViewController {
         suffixTextField.isEnabled = false
         generateButton.isEnabled = false
 
-        [copyPrivateKeyButton, copyPublicKeyButton, copyAddressButton].forEach { $0.isEnabled = false }
+        copyButtons.forEach { $0.isEnabled = false }
     }
 
     func enableControls() {
@@ -69,7 +72,7 @@ class ViewController: NSViewController {
         suffixTextField.isEnabled = true
         generateButton.isEnabled = true
 
-        [copyPrivateKeyButton, copyPublicKeyButton, copyAddressButton].forEach { $0.isEnabled = true }
+        copyButtons.forEach { $0.isEnabled = true }
     }
 
     @IBAction func copyPrivateKey(_ sender: Any) {

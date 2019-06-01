@@ -968,7 +968,7 @@
                     </view>
                     <connections>
                         <outlet property="addressField" destination="J8w-5M-yYz" id="3W9-4G-ne4"/>
-                        <outlet property="copyAddressButton" destination="MOg-kg-ye3" id="IkN-If-0ER"/>
+                        <outlet property="copyAddressButton" destination="J3o-Dw-YJ7" id="tTD-eM-bkP"/>
                         <outlet property="copyJSONButton" destination="MOg-kg-ye3" id="pbN-s4-UWZ"/>
                         <outlet property="copyPrivateKeyButton" destination="buu-cx-U70" id="LLk-5z-T7r"/>
                         <outlet property="copyPublicKeyButton" destination="DUj-FW-UiG" id="rxr-3B-oK6"/>

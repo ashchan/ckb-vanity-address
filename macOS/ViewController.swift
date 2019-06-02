@@ -22,6 +22,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var copyAddressButton: NSButton!
     @IBOutlet weak var copyJSONButton: NSButton!
 
+    private var generator: VanityAddressGenerator?
+
     private var copyButtons: [NSButton] {
         return [copyPrivateKeyButton, copyPublicKeyButton, copyAddressButton, copyJSONButton]
     }
@@ -36,6 +38,15 @@ class ViewController: NSViewController {
     }
 
     @IBAction func generateButtonClicked(_ sender: Any) {
+        if let generator = generator {
+            generator.cancelled = true
+            self.generator = nil
+            enableControls()
+            return
+        }
+
+        self.generator = VanityAddressGenerator(suffix: addressSuffix)
+
         disableControls()
         DispatchQueue.global().async {
             let result = self.generate()
@@ -47,11 +58,15 @@ class ViewController: NSViewController {
     }
 
     func process(result: Result<Address, Error>) {
+        generator = nil
+
         switch result {
         case .success(let address):
             self.address = address
         case .failure(let error):
-            showError(error)
+            guard case VanityAddressGenerator.Error.userCancelled = error else {
+                return showError(error)
+            }
         }
     }
 
@@ -61,7 +76,7 @@ class ViewController: NSViewController {
         indicator.isHidden = false
         indicator.startAnimation(nil)
         suffixTextField.isEnabled = false
-        generateButton.isEnabled = false
+        generateButton.title = "Cancel"
 
         copyButtons.forEach { $0.isEnabled = false }
     }
@@ -70,7 +85,7 @@ class ViewController: NSViewController {
         indicator.isHidden = true
         indicator.stopAnimation(nil)
         suffixTextField.isEnabled = true
-        generateButton.isEnabled = true
+        generateButton.title = "Generate"
 
         copyButtons.forEach { $0.isEnabled = true }
     }
@@ -109,9 +124,8 @@ class ViewController: NSViewController {
 
 extension ViewController {
     func generate() -> Result<Address, Error> {
-        let generator = VanityAddressGenerator(suffix: addressSuffix)
         do {
-            let address = try generator.run()
+            let address = try generator!.run()
             return .success(address)
         } catch {
             return .failure(error)

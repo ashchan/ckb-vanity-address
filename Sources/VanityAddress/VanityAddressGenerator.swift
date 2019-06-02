@@ -2,6 +2,7 @@ import Foundation
 
 public final class VanityAddressGenerator {
     private let suffix: String
+    var cancelled = false
 
     public init(suffix: String = "") {
         self.suffix = suffix
@@ -16,6 +17,9 @@ public final class VanityAddressGenerator {
         repeat {
             progressReport?()
             address = nextAddress()
+            if cancelled {
+                throw Error.userCancelled
+            }
         } while !address.hasSuffix(suffix)
 
         return address
@@ -82,11 +86,14 @@ public extension VanityAddressGenerator {
 
     enum Error: Swift.Error, LocalizedError {
         case invalidCharacter
+        case userCancelled
 
         public var errorDescription: String? {
             switch self {
             case .invalidCharacter:
                 return "Invalid character within suffix. Only Bech32 characters are allowed."
+            case .userCancelled :
+                return "Sorry you deciced to go."
             }
         }
     }

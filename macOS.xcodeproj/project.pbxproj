@@ -111,6 +111,7 @@
 				1A41984422A21DD8002CED15 /* Frameworks */,
 				1A41984522A21DD8002CED15 /* Resources */,
 				2007B6AA7272D0B6B2C77955 /* [CP] Embed Pods Frameworks */,
+				1A9DCAF022A3CA0F001C3E15 /* Bump Build Number */,
 			);
 			buildRules = (
 			);
@@ -172,6 +173,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1A9DCAF022A3CA0F001C3E15 /* Bump Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bump Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git=`sh /etc/profile; which git`\nbundleVersion=`\"$git\" rev-list --all |wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
+		};
 		2007B6AA7272D0B6B2C77955 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

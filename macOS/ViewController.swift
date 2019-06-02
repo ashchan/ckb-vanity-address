@@ -37,6 +37,12 @@ class ViewController: NSViewController {
         }
     }
 
+    override func viewDidAppear() {
+        super.viewDidAppear()
+
+        view.window?.delegate = self
+    }
+
     @IBAction func generateButtonClicked(_ sender: Any) {
         if let generator = generator {
             generator.cancelled = true
@@ -142,5 +148,21 @@ extension ViewController {
 
         alert.beginSheetModal(for: view.window!, completionHandler: { (modalResponse: NSApplication.ModalResponse) -> Void in
         })
+    }
+}
+
+extension ViewController: NSWindowDelegate {
+    func windowShouldClose(_ sender: NSWindow) -> Bool {
+        let alert = NSAlert()
+        alert.messageText = "Closing..."
+        alert.informativeText = "Please choose to quit or stay."
+        alert.addButton(withTitle: "Quit")
+        alert.addButton(withTitle: "Let me stay")
+        alert.alertStyle = .warning
+        let response = alert.runModal()
+        if response == .alertFirstButtonReturn {
+            NSApplication.shared.terminate(sender)
+        }
+        return response == .alertFirstButtonReturn
     }
 }

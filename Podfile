@@ -7,6 +7,6 @@ target "CKB Vanity Address" do
   use_modular_headers!
   inhibit_all_warnings!
 
-  pod "CKB", git: "https://github.com/nervosnetwork/ckb-sdk-swift.git", tag: "v0.13.0"
+  pod "CKB", git: "https://github.com/nervosnetwork/ckb-sdk-swift.git", tag: "v0.14.0"
 end
 

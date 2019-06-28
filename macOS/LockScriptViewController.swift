@@ -20,6 +20,8 @@ class LockScriptViewController: NSViewController {
     }
 
     @IBAction func getLockScript(_ sender: Any) {
+        view.window?.makeFirstResponder(nil)
+
         let helper = LockScriptHelper(publicKey: publicKey)
         do {
             let lockScript = try helper.getLockScript()

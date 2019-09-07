@@ -19,7 +19,7 @@ final class LockScriptHelper {
         }
 
         let nodeUrl = URL(string: "http://localhost:8114")!
-        let script = try SystemScript.loadFromGenesisBlock(nodeUrl: nodeUrl)
+        let script = try SystemScript.loadSystemScript(nodeUrl: nodeUrl)
         systemScript = script
         return script
     }
@@ -32,6 +32,6 @@ final class LockScriptHelper {
         let pubkeyHash = Utils.prefixHex(
             AddressGenerator(network: .testnet).hash(for: Data(hex: publicKey)).toHexString()
         )
-        return Script(args: [pubkeyHash], codeHash: try LockScriptHelper.loadSystemScript().codeHash)
+        return try LockScriptHelper.loadSystemScript().lock(for: pubkeyHash)
     }
 }

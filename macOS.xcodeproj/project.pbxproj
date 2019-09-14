@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A14742D232C7D5E00D7E4A5 /* CKB in Frameworks */ = {isa = PBXBuildFile; productRef = 1A14742C232C7D5E00D7E4A5 /* CKB */; };
 		1A2FE2AA22A2A2CF00F97CBD /* LockScriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2FE2A922A2A2CF00F97CBD /* LockScriptViewController.swift */; };
 		1A41984B22A21DD8002CED15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41984A22A21DD8002CED15 /* AppDelegate.swift */; };
 		1A41984D22A21DD8002CED15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41984C22A21DD8002CED15 /* ViewController.swift */; };
@@ -15,7 +16,6 @@
 		1A41985B22A2233C002CED15 /* VanityAddressGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */; };
 		1A41985D22A233F6002CED15 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41985C22A233F6002CED15 /* Address.swift */; };
 		1A54044222A2910900567DDE /* LockScriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A54044122A2910900567DDE /* LockScriptHelper.swift */; };
-		44CEB4C77F8D0C1D91D52912 /* Pods_CKB_Vanity_Address.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +30,6 @@
 		1A41985A22A2233C002CED15 /* VanityAddressGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VanityAddressGenerator.swift; path = Sources/VanityAddress/VanityAddressGenerator.swift; sourceTree = SOURCE_ROOT; };
 		1A41985C22A233F6002CED15 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Sources/VanityAddress/Address.swift; sourceTree = SOURCE_ROOT; };
 		1A54044122A2910900567DDE /* LockScriptHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScriptHelper.swift; sourceTree = "<group>"; };
-		26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKB Vanity Address.release.xcconfig"; path = "Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address.release.xcconfig"; sourceTree = "<group>"; };
-		8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKB Vanity Address.debug.xcconfig"; path = "Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address.debug.xcconfig"; sourceTree = "<group>"; };
-		AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKB_Vanity_Address.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44CEB4C77F8D0C1D91D52912 /* Pods_CKB_Vanity_Address.framework in Frameworks */,
+				1A14742D232C7D5E00D7E4A5 /* CKB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +50,6 @@
 				1A41984922A21DD8002CED15 /* macOS */,
 				1A41984822A21DD8002CED15 /* Products */,
 				C8E40C65C0FAF21C805D3A0A /* Pods */,
-				8B7B88611CE81EF9C370A995 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,19 +78,9 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		8B7B88611CE81EF9C370A995 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AB5257891BBF007BCD68FB4F /* Pods_CKB_Vanity_Address.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C8E40C65C0FAF21C805D3A0A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */,
-				26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -106,11 +92,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A41985722A21DD9002CED15 /* Build configuration list for PBXNativeTarget "CKB Vanity Address" */;
 			buildPhases = (
-				DCFB116F7B9D7C99002EEFA8 /* [CP] Check Pods Manifest.lock */,
 				1A41984322A21DD8002CED15 /* Sources */,
 				1A41984422A21DD8002CED15 /* Frameworks */,
 				1A41984522A21DD8002CED15 /* Resources */,
-				2007B6AA7272D0B6B2C77955 /* [CP] Embed Pods Frameworks */,
 				1A9DCAF022A3CA0F001C3E15 /* Bump Build Number */,
 			);
 			buildRules = (
@@ -118,6 +102,9 @@
 			dependencies = (
 			);
 			name = "CKB Vanity Address";
+			packageProductDependencies = (
+				1A14742C232C7D5E00D7E4A5 /* CKB */,
+			);
 			productName = "CKB Vanity Address";
 			productReference = 1A41984722A21DD8002CED15 /* CKB Vanity Address.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 1A41983E22A21DD8002CED15;
+			packageReferences = (
+				1A14742B232C7D5E00D7E4A5 /* XCRemoteSwiftPackageReference "ckb-sdk-swift" */,
+			);
 			productRefGroup = 1A41984822A21DD8002CED15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,6 +171,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}",
 			);
 			name = "Bump Build Number";
 			outputFileListPaths = (
@@ -190,45 +181,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "git=`sh /etc/profile; which git`\nbundleVersion=`\"$git\" rev-list --all |wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
-		};
-		2007B6AA7272D0B6B2C77955 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CKB Vanity Address/Pods-CKB Vanity Address-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCFB116F7B9D7C99002EEFA8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CKB Vanity Address-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -377,7 +329,6 @@
 		};
 		1A41985822A21DD9002CED15 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B3EBB650890D3FCA8E7384D /* Pods-CKB Vanity Address.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "macOS/CKB Vanity Address.entitlements";
@@ -400,7 +351,6 @@
 		};
 		1A41985922A21DD9002CED15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26E24C22A8309FA6E527986A /* Pods-CKB Vanity Address.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "macOS/CKB Vanity Address.entitlements";
@@ -443,6 +393,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A14742B232C7D5E00D7E4A5 /* XCRemoteSwiftPackageReference "ckb-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nervosnetwork/ckb-sdk-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A14742C232C7D5E00D7E4A5 /* CKB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A14742B232C7D5E00D7E4A5 /* XCRemoteSwiftPackageReference "ckb-sdk-swift" */;
+			productName = CKB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A41983F22A21DD8002CED15 /* Project object */;
 }

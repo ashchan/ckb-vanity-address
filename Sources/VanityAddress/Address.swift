@@ -8,7 +8,7 @@ public struct Address: CustomStringConvertible {
     init(privateKey: String) {
         self.privateKey = privateKey
         publicKey = Utils.privateToPublic(privateKey)
-        address = Utils.publicToAddress(publicKey, network: .testnet)
+        address = Utils.publicToAddress(publicKey, network: .mainnet)
     }
 
     func hasSuffix(_ suffix: String) -> Bool {

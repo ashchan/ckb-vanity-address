@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -756,7 +756,7 @@
                                         <rect key="frame" x="0.0" y="76" width="857" height="30"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4JO-mt-wjy">
-                                                <rect key="frame" x="-2" y="13" width="76" height="17"/>
+                                                <rect key="frame" x="-2" y="14" width="76" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="mF6-tM-z5D"/>
                                                 </constraints>
@@ -767,7 +767,7 @@
                                                 </textFieldCell>
                                             </textField>
                                             <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AKp-oZ-pjh">
-                                                <rect key="frame" x="92" y="7" width="645" height="23"/>
+                                                <rect key="frame" x="92" y="11" width="645" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="540" id="zkp-FY-jQu"/>
                                                 </constraints>
@@ -812,7 +812,7 @@
                                         <rect key="frame" x="0.0" y="38" width="857" height="30"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-Ym-pH2">
-                                                <rect key="frame" x="-2" y="13" width="76" height="17"/>
+                                                <rect key="frame" x="-2" y="14" width="76" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="Dkq-rt-aqO"/>
                                                 </constraints>
@@ -865,7 +865,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="857" height="30"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tH5-b5-qa9">
-                                                <rect key="frame" x="-2" y="13" width="76" height="17"/>
+                                                <rect key="frame" x="-2" y="14" width="76" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="CgH-3y-QbW"/>
                                                 </constraints>
@@ -947,7 +947,7 @@
                                     <action selector="copyJSON:" target="XfG-lQ-9wD" id="g8N-V2-mz5"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rGv-qi-c9P">
+                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rGv-qi-c9P">
                                 <rect key="frame" x="459" y="13" width="212" height="32"/>
                                 <buttonCell key="cell" type="push" title="Mine/LockScript Viewer" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yai-td-QIQ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1005,7 +1005,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2pK-JL-Fhj">
-                                <rect key="frame" x="18" y="210" width="66" height="17"/>
+                                <rect key="frame" x="18" y="211" width="66" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Public key" id="mAL-E2-ycc">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1013,7 +1013,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4HF-92-Vdb">
-                                <rect key="frame" x="18" y="147" width="71" height="17"/>
+                                <rect key="frame" x="18" y="149" width="71" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Lock script" id="zVv-Vm-Oy4">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1021,7 +1021,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="rCn-gM-EPc">
-                                <rect key="frame" x="20" y="184" width="645" height="20"/>
+                                <rect key="frame" x="20" y="185" width="645" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="540" id="fUl-YR-o1S"/>
                                 </constraints>
@@ -1035,7 +1035,7 @@
                                 </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="oKI-ac-3om">
-                                <rect key="frame" x="20" y="81" width="645" height="60"/>
+                                <rect key="frame" x="20" y="83" width="645" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9Qo-oS-bfp"/>
                                 </constraints>

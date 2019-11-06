@@ -30,7 +30,7 @@ final class LockScriptHelper {
 
     func getLockScript() throws -> Script {
         let pubkeyHash = Utils.prefixHex(
-            AddressGenerator(network: .testnet).hash(for: Data(hex: publicKey)).toHexString()
+            AddressGenerator.hash(for: Data(hex: publicKey)).toHexString()
         )
         return try LockScriptHelper.loadSystemScript().lock(for: pubkeyHash)
     }

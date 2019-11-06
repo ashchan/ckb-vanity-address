@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "VanityAddress", targets: ["VanityAddress"])
     ],
     dependencies: [
-        .package(url: "https://github.com/nervosnetwork/ckb-sdk-swift", from: "0.20.0")
+        .package(url: "https://github.com/nervosnetwork/ckb-sdk-swift", from: "0.24.0")
     ],
     targets: [
         .target(
